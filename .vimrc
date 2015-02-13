@@ -3,9 +3,9 @@ call pathogen#helptags()
 
 " --------- SOLARIZED CONFIG --------
 syntax enable
-set background=light
+set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme molokai
 
 " --------- VARIOUS CONFIGS ---------
 " ---------  jason 2/6/15  ----------
@@ -19,8 +19,8 @@ set ignorecase                   " Case insensitive search
 set incsearch                    " Search as you type
 set laststatus=2                 " Always display status line
 
-set list                         " Show trailing whitespace
-set listchars=tab:▸\ ,trail:▫    " Show trailing whitespace pt. 2
+"set list                         " Show trailing whitespace
+"set listchars=tab:▸\ ,trail:▫    " Show trailing whitespace pt. 2
 set mouse=a                      " Enable mouse behavior
 set nostartofline                " Stop certain movements from always going to the first character of a line.
 
@@ -46,6 +46,9 @@ set tabstop=4                    " Tabs occupy 4 chars
 " ---------- remappings ---------
 inoremap jj <Esc>     " remap two j's to escape in insert mode.
 nnoremap JJJJ <Nop>   " remap two j's to escape in insert mode.
+cnoreabbrev W w
+
+command Color colorscheme
 
 autocmd VimResized * :wincmd=    " rebalance windows on vim resize
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
